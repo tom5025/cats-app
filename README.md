@@ -30,3 +30,6 @@ Tanstack query
 
 ![Screen](/screenshot/catsapp.png)
 
+Deployment : 
+
+https://cats-app-sandy.vercel.app/
