@@ -4,7 +4,9 @@ Try it out !
 
 ## Getting Started
 
-First, run the development server:
+npm i
+
+then run the development server:
 
 ```bash
 npm run dev
@@ -26,5 +28,5 @@ React
 Chakra UI
 Tanstack query
 
-Screenshot :
+![Screen](/screenshot/catsapp.png)
 
