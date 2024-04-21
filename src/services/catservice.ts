@@ -3,8 +3,8 @@ import { BaseService } from "./baseservice";
 import { Endpoints } from "./endpoints";
 
 export class CatService extends BaseService {
-    async getCats(): Promise<Cat[]> {
-        const response = await fetch(Endpoints.cats.list, {
+    async getCats(page: number): Promise<Cat[]> {
+        const response = await fetch(Endpoints.cats.getList(page), {
         method: 'GET',
         headers: {
           "Content-Type": "application/json",
