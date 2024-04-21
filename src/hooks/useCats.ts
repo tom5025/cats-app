@@ -9,6 +9,7 @@ export const useCats = () => {
             return await new CatService().getCats();
         },
         retryDelay: retryDelayWithJitter,
+        refetchOnWindowFocus: false,
     })
 
     return {data, isLoading, isFetching, refetch};
