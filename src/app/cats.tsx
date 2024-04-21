@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 const CatGallery: React.FC = () => {
   const [page, setPage] = useState(0);
   const [favorites, setFavorites] = useState(new Set()); 
-  const { ref, inView } = useInView({threshold: 0.5});
+  const { ref, inView } = useInView({threshold: 0.5, rootMargin: '400px'});
   const { data: cats, isFetching, isLoading } = useCats(page);
   const toast = useToast();
 
@@ -38,7 +38,7 @@ const CatGallery: React.FC = () => {
       }}
       gap={6}>
       {cats?.map((cat, index) => (
-        <Box borderWidth="1px" key={cat.id} boxShadow="md" p="6" rounded="md" bg="white">
+        <Box borderWidth="1px" key={cat.id + index} boxShadow="md" p="6" rounded="md" bg="white">
           <Image borderRadius="md" src={cat.url} alt={`Cat - ${cat.breeds[0]?.name || 'Unknown'}`} />
           <Flex align="baseline" justify="space-between" mt={2} wrap="nowrap">
            
