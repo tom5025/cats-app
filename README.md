@@ -1,6 +1,6 @@
 This project uses Next.js 
 
-Try it out !
+Try it out live here : [cats-app-sandy.vercel.app](https://cats-app-sandy.vercel.app/)
 
 ## Getting Started
 
@@ -32,4 +32,3 @@ Tanstack query
 
 Deployment : 
 
-https://cats-app-sandy.vercel.app/
