@@ -5,6 +5,8 @@ import Head from 'next/head';
 import CatGallery from './cats';
 import { ChakraProvider } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import GoogleAuth from "./googleAuth";
+import TopToolbar from "./toptoolbar";
 
 export default function Home() {
   return (
@@ -14,8 +16,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen bg-gray-100 py-10">
-        <h1 className="text-center text-4xl font-bold text-gray-800 mb-10">Random Cats</h1>
+      <main className="min-h-screen bg-gray-100">
+        <TopToolbar/>
         <QueryClientProvider client={new QueryClient}>
           <ChakraProvider>
             <CatGallery></CatGallery>
